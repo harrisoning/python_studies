@@ -7,6 +7,9 @@ class Employee:
         self.salary = salary
         Employee.empCount += 1
 
+    def __dir__(self):
+        return ['name', 'salary']
+
     def displayCount(self):
         print (f"Total Employee {Employee.empCount}" )
 
@@ -20,8 +23,6 @@ class Employee:
         self.__secretAccess(access)
 
     
-
-
 if __name__ == '__main__':
     # 创建 Employee 类的对象
     emp1 = Employee("Zara", 2000)
