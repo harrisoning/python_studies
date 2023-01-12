@@ -22,6 +22,16 @@ class Employee:
     def tellSecretAccess(self, access):
         self.__secretAccess(access)
 
+class Manager(Employee):
+    '管理人员'
+
+    def __init__(self, name, salary, title):
+        super().__init__(name, salary)
+        self.title = title
+
+    def myDuty(self, duty):
+        print(f'My job duty is to {duty}')
+
     
 if __name__ == '__main__':
     # 创建 Employee 类的对象
